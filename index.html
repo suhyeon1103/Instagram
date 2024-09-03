@@ -52,11 +52,60 @@
             text-align: center;
         }
 
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1a1a1a;
+            padding: 10px 20px;
+            margin-left: auto;
+            gap: 20px;
+            height: 45px;
+            border-bottom: 1px solid #666;
+        }
+
+        .left-sidebar {
+            width: 170px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            border-right: 1px solid #666;
+            padding-top: 80px;
+            font-size: 14px;
+            background-color: #1a1a1a;
+        }
+
+        .left-sidebar .menu-i img {
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+            margin-left: 20px;
+        }
+
+        .left-sidebar .menu-i svg {
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+            margin-left: 20px;
+        }
+
+        .left-sidebar .menu-i {
+            display: flex;
+            align-items: center;
+            margin: 40px 0;
+            margin-top: 20px;
+        }
+
         .flex-row {
             display: flex;
             flex-direction: row;
             align-items: center;
             gap: 12px;
+        }
+
+        .insta-background-color {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
         }
 
         .story {
@@ -67,30 +116,86 @@
 
         .story-container {
            display: flex;
-           flex-direction: column;
-           margin: 10px 8px;
+           flex: 1;
+           flex-direction: column; 
+           margin: 20px 5px;
            justify-content: center;
            align-items: center;
         }
-
+        
         .story-img {
             width: 56px;
             height: 56px;
+            background-color: #1a1a1a;
             border-radius: 999px;
-            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            border: 2px solid;
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+            margin: 5px;
         }
 
         .card-container {
             display: flex;
             flex-direction: column;
+            max-width: 550px;
+            margin-top: 10px;
         }
 
-        .card-container-header {
+        .card-item {
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .card-header {
+            display: flex;
+            gap: 6px;
+        }
+
+        .card-profile-name-container {
+            display: flex;
+            flex-direction: column;
         }
 
         .card-profile-image {
-            width: ;
+            width: 32px;
+            height: 32px;
+            border-radius: 999px;
+        }
+
+        span {
+            font-size: 12px;
+        }
+
+        .time {
+            font-weight: 600;
+            color: #666;
+            font-size: 10px;
+        }
+
+        .flex-1 {
+            flex: 1;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        p.likes {
+            margin: -10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        span.translation {
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .gray-color {
+            color: #999;
         }
 
 
@@ -109,6 +214,42 @@
                 <div>
                     <svg aria-label="알림" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>알림</title><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg>
                 </div>
+            </div>
+            <div class="sidebar">
+                <aside class="left-sidebar">
+                    <nav class="menu">
+                        <div class="menu-i">
+                            <svg aria-label="홈" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>홈</title><path d="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"></path></svg>
+                            <span>Home</span>
+                        </div>
+                        <div class="menu-i">
+                            <svg aria-label="검색 및 탐색하기" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>검색 및 탐색하기</title><path d="M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="16.511" x2="22" y1="16.511" y2="22"></line></svg>
+                            <span>Search</span>
+                        </div>
+                        <div class="menu-i">
+                            <svg aria-label="릴스" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>릴스</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+                            <span>Reels</span>
+                        </div>
+                        <div class="menu-i">
+                            <svg aria-label="Direct" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Direct</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                            <span>Message</span>
+                        </div>
+                        <div class="menu-i">
+                            <svg aria-label="알림" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>알림</title><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg>
+                            <span>Notification</span>
+                        </div>
+                        <div class="menu-i">
+                            <svg aria-label="새로운 게시물" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>새로운 게시물</title><path d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line></svg>
+                            <span>New</span>
+                        </div>
+                        <div class="menu-i">
+                            <img alt="waterhyeon._.1님의 프로필 사진" class="xpdipgo x972fbf xcfux6l x1qhh985 xm0m39n xk390pu x5yr21d xdj266r x11i5rnm xat24cr x1mh8g0r xl1xv1r xexx8yu x4uap5 x18d9i69 xkhd6sd x11njtxf xh8yej3" crossorigin="anonymous" draggable="false" src="https://scontent.cdninstagram.com/v/t51.2885-19/367002686_224511750581406_2803224462424380517_n.jpg?stp=dst-jpg_s150x150&amp;_nc_ht=scontent.cdninstagram.com&amp;_nc_cat=106&amp;_nc_ohc=mh-Rlo3m2y0Q7kNvgH-uhpu&amp;edm=APs17CUBAAAA&amp;ccb=7-5&amp;oh=00_AYDgmjKYZPOd7fnenEdY8ItS3ti_xeHwa4eSCq6bjsZWkA&amp;oe=66DCCE6E&amp;_nc_sid=10d13b">
+                            <span>Profile</span>
+                        </div>
+                    </nav>
+                </aside>
+
+
             </div>
             
         </header>
@@ -150,18 +291,45 @@
         </section>
 
         <section class="card-container">
-            <div class="carf-item">
+            <div class="card-item">
                 <div class="card-header">
-                    <div class="card-profile-image">
-                        <div class="card-profile-name-container">
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="time">12h</div>
+                    <div class="card-profile-image insta-background-color"></div>
+                    <div class="card-profile-name-container">
+                        <span>Waterhyeon._.1</span>
+                        <span>everywhere</span>
                     </div>
+                    <div class="time">* 12h</div>
+                    <div class="flex-1"></div>
+                    <svg aria-label="옵션 더 보기" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>옵션 더 보기</title><circle cx="12" cy="12" r="1.5"></circle><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle></svg>
                 </div>
+
+                <img src="https://placehold.co/450x475" alt="Feed">
+
+                <div class="row">
+                    <svg aria-label="좋아요" class="x1lliihq x1n2onr6 xyb1xck" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>좋아요</title><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg>
+                    <svg aria-label="댓글 달기" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>댓글 달기</title><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    <svg aria-label="공유하기" class="x1lliihq x1n2onr6 xyb1xck" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>공유하기</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                    <svg aria-label="저장" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>저장</title><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                </div>
+
+                <span class="like">2.1m likes</span>
+
+                <div class="flex-row">
+                    <span>hanwhaeagles_soori<svg aria-label="인증됨" class="x1lliihq x1n2onr6" fill="rgb(0, 149, 246)" height="12" role="img" viewBox="0 0 40 40" width="12"><title>인증됨</title><path d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z" fill-rule="evenodd"></path></svg> 9월 3일(화) 대전 두산전<br>
+                          문가네 대활약🦅 문동주의 8K 호투와 문현빈의 시원한 홈런포 포함 3안타 활약에 힘입어 역전승!<br>
+                         <br> 
+                         - 승리투수 : 문동주(시즌 7승)<br>
+                         - 홈런 : 문현빈(시즌 5호), 채은성(시즌 18호)<br>
+                         - 결승타 : 문현빈 5회말 3점 홈런<br>
+                         <br>                 
+                         #한화이글스 #diffrent_us
+                </div>
+
+                <span class="translation">See Translation</span>
+                <span class="gray-color">View all 741 comments</span>
+                <span class="gray-color">Add a comment...</span>
             </div>
         </section>
     </div>
 </body>
-</html>
+</html> 
